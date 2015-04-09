@@ -1,0 +1,243 @@
+// ANDROID *********************************************************
+
+".viewFooter[platform=android]": { 
+	height: 80,
+	width: Ti.UI.FILL,
+	backgroundColor: Alloy.CFG.BLUE2,
+	layout: 'horizontal'
+}
+
+".MenuView1[platform=android]": {
+    height: 80, 
+    backgroundGradient: {
+        type: 'linear',
+        startPoint: { x: '100%', y: '0%' },
+        endPoint: { x: '100%', y: '100%' },
+        colors: [ { color: Alloy.CFG.GREEN1},  { color: Alloy.CFG.GREEN2} ],
+        backFillStart: false
+    },
+    
+}
+
+".MenuView2[platform=android]": {
+    height: 80, 
+    backgroundGradient: {
+        type: 'linear',
+        startPoint: { x: '100%', y: '0%' },
+        endPoint: { x: '100%', y: '100%' },
+        colors: [ { color: Alloy.CFG.BLUE1},  { color: Alloy.CFG.BLUE2} ],
+        backFillStart: false
+    },
+    
+}
+
+".MenuView3[platform=android]": {
+    height: 80, 
+    backgroundGradient: {
+        type: 'linear',
+        startPoint: { x: '100%', y: '0%' },
+        endPoint: { x: '100%', y: '100%' },
+        colors: [ { color: Alloy.CFG.RED1},  { color: Alloy.CFG.RED2} ],
+        backFillStart: false
+    },
+    
+}
+
+".MenuView4[platform=android]": {
+    height: 80, 
+    backgroundGradient: {
+        type: 'linear',
+        startPoint: { x: '100%', y: '0%' },
+        endPoint: { x: '100%', y: '100%' },
+        colors: [ { color: Alloy.CFG.ORANGE1},  { color: Alloy.CFG.ORANGE2} ],
+        backFillStart: false
+    },
+    
+}
+
+".MenuView5[platform=android]": {
+    height: 80, 
+    backgroundGradient: {
+        type: 'linear',
+        startPoint: { x: '100%', y: '0%' },
+        endPoint: { x: '100%', y: '100%' },
+        colors: [ { color: Alloy.CFG.BLUELIGHT1},  { color: Alloy.CFG.BLUELIGHT2} ],
+        backFillStart: false
+    },
+    
+}
+
+".viewOver[platform=android]": {
+    height: 8, 
+    backgroundColor: Alloy.CFG.BLACK,
+    bottom: 0,
+    opacity: 1
+    
+}
+
+".MenuText[platform=android]": {
+	color: Alloy.CFG.WHITE,
+	font: {
+		fontFamily: Alloy.CFG.GENEVA, 
+		fontSize: 	10,
+		fontWeight: 'normal'
+	},
+	top:45,
+	textAlign: 'center'
+
+}
+
+
+".MenuImage1[platform=android]": {
+    left: 10,
+    right: 10,
+    top: 15,
+}
+
+".MenuImage2[platform=android]": {
+    left: 10,
+    right: 10,
+    top: 15,
+}
+
+".MenuImage3[platform=android]": {
+    left: 10,
+    right: 10,
+    top: 15,
+}
+
+".MenuImage4[platform=android]": {
+    left: 10,
+    right: 10,
+    top: 15,
+}
+
+".MenuImage5[platform=android]": {
+    left: 10,
+    right: 10,
+    top: 15,
+}
+
+
+
+
+// IPHONE *********************************************************
+
+".viewFooter[platform=ios]": { 
+	height: 80,
+	width: Ti.UI.FILL,
+	backgroundColor: Alloy.CFG.BLUE,
+	layout: 'horizontal'
+}
+
+
+".MenuView1[platform=ios]": {
+    height: 80, 
+    backgroundGradient: {
+        type: 'linear',
+        startPoint: { x: '100%', y: '0%' },
+        endPoint: { x: '100%', y: '100%' },
+        colors: [ { color: Alloy.CFG.GREEN1},  { color: Alloy.CFG.GREEN2} ],
+        backFillStart: false
+    },
+    
+}
+
+".MenuView2[platform=ios]": {
+    height: 80, 
+    backgroundGradient: {
+        type: 'linear',
+        startPoint: { x: '100%', y: '0%' },
+        endPoint: { x: '100%', y: '100%' },
+        colors: [ { color: Alloy.CFG.BLUE1},  { color: Alloy.CFG.BLUE2} ],
+        backFillStart: false
+    },
+    
+}
+
+".MenuView3[platform=ios]": {
+    height: 80, 
+    backgroundGradient: {
+        type: 'linear',
+        startPoint: { x: '100%', y: '0%' },
+        endPoint: { x: '100%', y: '100%' },
+        colors: [ { color: Alloy.CFG.RED1},  { color: Alloy.CFG.RED2} ],
+        backFillStart: false
+    },
+    
+}
+
+".MenuView4[platform=ios]": {
+    height: 80, 
+    backgroundGradient: {
+        type: 'linear',
+        startPoint: { x: '100%', y: '0%' },
+        endPoint: { x: '100%', y: '100%' },
+        colors: [ { color: Alloy.CFG.ORANGE1},  { color: Alloy.CFG.ORANGE2} ],
+        backFillStart: false
+    },
+    
+}
+
+".MenuView5[platform=ios]": {
+    height: 80, 
+    backgroundGradient: {
+        type: 'linear',
+        startPoint: { x: '100%', y: '0%' },
+        endPoint: { x: '100%', y: '100%' },
+        colors: [ { color: Alloy.CFG.BLUELIGHT1},  { color: Alloy.CFG.BLUELIGHT2} ],
+        backFillStart: false
+    },
+    
+}
+
+".viewOver[platform=ios]": {
+    height: 8, 
+    backgroundColor: Alloy.CFG.BLACK,
+    bottom: 0,
+    opacity: 1
+    
+}
+
+".MenuText[platform=ios]": {
+	color: Alloy.CFG.WHITE,
+	font: {
+		fontFamily: Alloy.CFG.GENEVA, 
+		fontSize: 	9,
+		fontWeight: 'normal'
+	},
+	top:48,
+	textAlign: 'center'
+
+}
+
+
+".MenuImage1[platform=ios]": {
+	width: 23,
+	height: 22,
+	top: 12
+}
+
+".MenuImage2[platform=ios]": {
+	width: 24,
+	height: 22,
+	top: 12
+}
+
+".MenuImage3[platform=ios]": {
+	width: 20,
+	height: 23,
+	top: 12
+}
+
+".MenuImage4[platform=ios]": {
+	width: 23,
+	height: 23,
+	top: 12
+}
+
+".MenuImage5[platform=ios]": {
+	width: 23,
+	height: 25,
+	top: 12
+}

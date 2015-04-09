@@ -1,0 +1,29 @@
+<Alloy>
+	<View class="viewHechoenmijas" id="viewHechoenmijas" >
+		
+		
+		<!-- Content -->
+		<View class="containerHechoenmijas" id="containerHechoenmijas" >
+			
+			<!-- Título
+			<View class="viewTitle">
+				<Label class="textTitle" id="textTitle" ></Label>
+			</View>-->
+			
+			<ScrollView   class="scrollableAgendaSlider"   showPagingControl="false" id="scrollableAgendaSlider" >
+					
+			</ScrollView>
+		
+		</View>
+		
+		<!-- Cabecera 
+		<Require id="header" src="header"  />-->
+		
+		<!-- Menú 
+		<Require id="footer" src="footer"  />-->
+		
+		<!-- Loading 
+		<Require id="loading" src="loading"  />-->
+		
+	</View>
+</Alloy>

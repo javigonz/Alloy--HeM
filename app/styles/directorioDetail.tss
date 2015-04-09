@@ -1,0 +1,268 @@
+// ANDROID *********************************************************
+
+".viewDirectorioDetaiol[platform=android]": { 
+	backgroundColor:Alloy.CFG.WHITE,
+	top: 0
+}
+
+".containerScroll[platform=android]": {
+	   contentHeight: Ti.UI.SIZE, 
+	   contentWidth: Ti.UI.SIZE,   
+	   showVerticalScrollIndicator: 'true',
+	   scrollType: 'vertical',
+	   width: Ti.UI.FILL,
+	   top: 0,
+	   backgroundColor: Alloy.CFG.WHITE
+	  
+}
+
+".containerDirectorioDetail[platform=android]": {
+    height: Ti.UI.FILL,
+    width: Ti.UI.FILL,
+    top: 0,
+    layout: 'vertical',
+    backgroundColor: Alloy.CFG.WHITE
+}
+
+
+".viewTitle[platform=android]": {
+	height: 30,
+	width: Ti.UI.FILL,
+	top: 1,
+	backgroundColor: Alloy.CFG.BLUE2
+}
+
+".textTitle[platform=android]": {
+	color: Alloy.CFG.WHITE,
+	font: {
+		fontFamily: Alloy.CFG.GENEVA, 
+		fontSize: 	14,
+		fontWeight: 'normal'
+	}
+}
+
+".style_viewImage[platform=android]": {
+	height: 175,
+	width: Ti.UI.FILL,
+	top: 10,
+	backgroundColor: Alloy.CFG.WHITE,
+}
+
+".ProductImage[platform=android]": {
+	height: 175
+}
+
+
+
+".style_viewName[platform=android]": {
+	height: 50,
+	width: '95%',
+	top: 10,
+	backgroundColor: Alloy.CFG.GREY_LIGHT,
+	
+}
+
+".textName[platform=android]": {
+	color: Alloy.CFG.BLACK,
+	font: {
+		fontFamily: Alloy.CFG.GENEVA, 
+		fontSize: 	13,
+		fontWeight: 'bold'
+	},
+	top: 5,
+	left: 5,
+	width: 280,
+	height: 19
+}
+
+".textDate[platform=android]": {
+	color: Alloy.CFG.GREY,
+	font: {
+		fontFamily: Alloy.CFG.GENEVA, 
+		fontSize: 	10,
+		fontWeight: 'normal'
+	},
+	left: 5,
+	top: 22,
+	width: 280,
+	height: 27
+}
+
+".style_viewGps[platform=android]": {
+	height: 50,
+	width: 50,
+	right: 0,
+	backgroundColor: Alloy.CFG.GREY_DARK,
+	textAlign: 'center'
+	
+}
+
+".style_iconoGps[platform=android]": {
+	top: 5,
+	height: 29,
+	width: 20,
+	
+}
+
+".textGps[platform=android]": {
+	color: Alloy.CFG.WHITE,
+	font: {
+		fontFamily: Alloy.CFG.GENEVA, 
+		fontSize: 	9,
+		fontWeight: 'normal'
+	},
+	bottom: 2
+}
+
+
+".textDescription[platform=android]" : {
+    width: '100%',
+    top: 10,
+    height: Ti.UI.FILL,
+    color: Alloy.CFG.GREY_LIGHT2,
+    font: {
+		fontFamily: Alloy.CFG.FONT_HELVETICA_NEUE_LT_LIGHT, 
+		fontSize: 	12,
+		fontWeight: 'normal'
+	},
+	backgroundColor: Alloy.CFG.WHITE,
+  
+}
+
+
+
+
+
+
+// IPHONE *********************************************************
+
+".viewDirectorioDetail[platform=ios]": { 
+	backgroundColor:Alloy.CFG.WHITE,
+	top: 0
+}
+
+".containerScroll[platform=ios]": {
+	   contentHeight: Ti.UI.SIZE, 
+	   contentWidth: Ti.UI.SIZE,   
+	   showVerticalScrollIndicator: 'true',
+	   scrollType: 'vertical',
+	   width: Ti.UI.FILL, 
+	   verticalBounce: 'false',
+	   top: 0,
+	   backgroundColor: Alloy.CFG.WHITE
+	  
+}
+
+".containerDirectorioDetail[platform=ios]": {
+    height: Ti.UI.FILL,
+    width: Ti.UI.FILL,
+    backgroundColor: Alloy.CFG.WHITE,
+    top: 0,
+    layout: 'vertical'
+}
+
+
+
+".viewTitle[platform=ios]": {
+	height: 30,
+	width: Ti.UI.FILL,
+	top: 1,
+	backgroundColor: Alloy.CFG.BLUE2
+}
+
+".textTitle[platform=ios]": {
+	color: Alloy.CFG.WHITE,
+	font: {
+		fontFamily: Alloy.CFG.GENEVA, 
+		fontSize: 	14,
+		fontWeight: 'normal'
+	}
+}
+
+".style_viewImage[platform=ios]": {
+	height: 150,
+	width: Ti.UI.FILL,
+	top: 10,
+	backgroundColor: Alloy.CFG.WHITE,
+}
+
+".productImage[platform=ios]": {
+	height: 150,
+	
+}
+
+".style_viewName[platform=ios]": {
+	height: 50,
+	width: '95%',
+	top: 10,
+	backgroundColor: Alloy.CFG.GREY_LIGHT,
+	
+}
+
+".textName[platform=ios]": {
+	color: Alloy.CFG.BLACK,
+	font: {
+		fontFamily: Alloy.CFG.GENEVA, 
+		fontSize: 	13,
+		fontWeight: 'bold'
+	},
+	top: 8,
+	left: 5,
+	width: 245,
+	height: 15
+}
+
+".textDate[platform=ios]": {
+	color: Alloy.CFG.GREY,
+	font: {
+		fontFamily: Alloy.CFG.GENEVA, 
+		fontSize: 	10,
+		fontWeight: 'normal'
+	},
+	left: 5,
+	top: 22,
+	width: 245,
+	height: 24
+}
+
+".style_viewGps[platform=ios]": {
+	height: 50,
+	width: 50,
+	right: 0,
+	backgroundColor: Alloy.CFG.GREY_DARK,
+	textAlign: 'center'
+	
+}
+
+".style_iconoGps[platform=ios]": {
+	top: 5,
+	height: 29,
+	width: 20,
+	
+}
+
+".textGps[platform=ios]": {
+	color: Alloy.CFG.WHITE,
+	font: {
+		fontFamily: Alloy.CFG.GENEVA, 
+		fontSize: 	9,
+		fontWeight: 'normal'
+	},
+	bottom: 5
+}
+
+".textDescription[platform=ios]" : {
+    width: '100%',
+    top: 10,
+    height:  Ti.UI.FILL,
+    color: Alloy.CFG.BLACK,
+    font: {
+		fontFamily: Alloy.CFG.FONT_HELVETICA_NEUE_LT_LIGHT, 
+		fontSize: 	12,
+		fontWeight: 'normal'
+	},
+	backgroundColor: Alloy.CFG.WHITE,
+  
+}
+
+

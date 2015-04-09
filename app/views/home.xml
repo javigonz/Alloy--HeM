@@ -1,0 +1,26 @@
+<Alloy>
+	<View class="viewHome" id="viewHome" >
+		
+		
+		<!-- Content -->
+		<View class="containerHome" id="containerHome" >
+			
+			<ScrollView   class="scrollableHomeSlider"   showPagingControl="false" id="scrollableHomeSlider" >
+				
+				<ImageView class="viewImage" image="/images/portada.png"></ImageView>	
+				
+			</ScrollView>
+		
+		</View>
+		
+		<!-- Cabecera 
+		<Require id="header" src="header"  />-->
+		
+		<!-- Menú 
+		<Require id="footer" src="footer"  />-->
+		
+		<!-- Loading 
+		<Require id="loading" src="loading"  />-->
+		
+	</View>
+</Alloy>

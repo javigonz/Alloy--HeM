@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	
+	<!-- MENÚ -->
+	<string name="text_1">HECHO EN MIJAS</string>
+	<string name="text_2">DIRECTORIO</string>
+	<string name="text_3">INICIO</string>
+	<string name="text_4">AGENDA</string>
+	<string name="text_5">OFERTAS</string>
+	
+	<!-- COMÚN -->
+	<string name="text_6">UPS!! ... Se produjo un error en la conexión, inténtalo otra vez.</string>
+	<string name="text_15">Cerrar</string>
+	
+	<!-- GOOGLE MAP -->
+	<string name="text_7">El servicio de Google Play no se encuentra. Por favor, instale estos servicios desde el Google Play Store.</string>
+	<string name="text_8">El servicio de Google Play está caducado.Por favor, instale estos servicios desde el Google Play Store.</string>
+	<string name="text_9">El servicio de Google Play está deshabilitado. Por favor, instale estos servicios desde el Google Play Store.</string>
+	<string name="text_10">El servicio de Google Play no puede autentificarte. Por favor, reinstale el servicio de Google Play.</string>
+	
+	<!-- DIRECTORIO -->
+	<string name="text_11">Seleccione la categoría ...</string>
+	<string name="text_12">Cancelar</string>
+	<string name="text_13">Seleccionar</string>
+	<string name="text_14">ubicación</string>
+	
+	
+</resources>

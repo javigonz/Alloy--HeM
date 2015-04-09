@@ -1,0 +1,48 @@
+// ANDROID *********************************************************
+
+".viewHome[platform=android]": { 
+	backgroundColor:Alloy.CFG.WHITE,
+	top: 0
+}
+
+".containerHome[platform=android]": {
+    height: Ti.UI.FILL,
+    width: Ti.Platform.displayCaps.platformWidth,
+    backgroundColor: Alloy.CFG.WHITE,
+    top: 0
+}
+
+".scrollableHomeSlider[platform=android]": {	     
+	showVerticalScrollIndicator: 'true',
+	scrollType: 'vertical',
+	width: Ti.UI.FILL, 
+	backgroundColor: Alloy.CFG.WHITE,
+	layout: "vertical" 
+}
+
+
+// IPHONE *********************************************************
+
+".viewHome[platform=ios]": { 
+	backgroundColor:Alloy.CFG.WHITE,
+	top: 0
+}
+
+".containerHome[platform=ios]": {
+    height: Ti.UI.FILL,
+    width: Ti.Platform.displayCaps.platformWidth,
+    backgroundColor: Alloy.CFG.WHITE,
+    //top: 50
+}
+
+".scrollableHomeSlider[platform=ios]": {
+	contentWidth: Ti.UI.FILL,      
+	showVerticalScrollIndicator: 'true',
+	scrollType: 'vertical',
+	backgroundColor: Alloy.CFG.WHITE,
+	layout: "vertical"     
+}
+
+".viewImage[platform=ios]": {
+    top: 40
+}

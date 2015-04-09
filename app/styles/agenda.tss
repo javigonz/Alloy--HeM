@@ -1,0 +1,250 @@
+// ANDROID *********************************************************
+
+".viewAgenda[platform=android]": { 
+	backgroundColor:Alloy.CFG.WHITE,
+	top: 0
+}
+
+".containerAgenda[platform=android]": {
+    width: Ti.UI.FILL,
+    backgroundColor: Alloy.CFG.WHITE,
+    //top: 45,
+    layout: 'vertical',
+    top: 0
+}
+
+".scrollableAgendaSlider[platform=android]": {	     
+	showVerticalScrollIndicator: 'true',
+	scrollType: 'vertical',
+	width: Ti.UI.FILL, 
+	backgroundColor: Alloy.CFG.WHITE,
+	layout: "vertical",
+	top: 0
+}
+
+".rowList[platform=android]": {
+	height: 120,
+	backgroundColor: Alloy.CFG.WHITE,
+	focusable: "true",
+	left: 0,
+	selectedBackgroundColor: Alloy.CFG.RED1
+}
+
+".rowLine[platform=android]": {
+	height: 1,
+	width: Ti.UI.FILL,
+	backgroundColor: Alloy.CFG.ORANGE3,
+	top: 119
+}
+
+".viewImage[platform=android]": {
+	height: Ti.UI.FILL,
+	width: 120,
+	left: 0
+	
+}
+
+".productImage[platform=android]": {
+	height: Ti.UI.FILL,
+	left: 0
+}
+
+".viewDescription[platform=android]": {
+	top: 5,
+	bottom: 10,
+	left: 130,
+	width: 200,
+	height: Ti.UI.FILL,
+	layout: 'vertical'
+
+}
+
+".textName[platform=android]": {
+	color: Alloy.CFG.BLACK,
+	font: {
+		fontFamily: Alloy.CFG.GENEVA, 
+		fontSize: 	13,
+		fontWeight: 'bold'
+	},
+	left: 0
+}
+
+".icon[platform=android]": {
+	left: 0,
+	
+}
+
+".iconView[platform=android]": {
+	height: 20,
+	layout: 'horizontal',
+	top: '-5'
+}
+
+".textDate[platform=android]": {
+	color: Alloy.CFG.ORANGE3,
+	font: {
+		fontFamily: Alloy.CFG.GENEVA, 
+		fontSize: 	10,
+		fontWeight: 'bold'
+	},
+	left: 3
+}
+
+".textDescription[platform=android]": {
+	color: Alloy.CFG.GREY,
+	font: {
+		fontFamily: Alloy.CFG.GENEVA, 
+		fontSize: 	11,
+		fontWeight: 'normal'
+	},
+	left: 0,
+	top: 0
+}
+
+".iconArrow[platform=android]": {
+	right: 5
+}
+
+".viewTitle[platform=android]": {
+	height: 30,
+	width: Ti.UI.FILL,
+	top: 1,
+	backgroundColor: Alloy.CFG.ORANGE3
+}
+
+".textTitle[platform=android]": {
+	color: Alloy.CFG.WHITE,
+	font: {
+		fontFamily: Alloy.CFG.GENEVA, 
+		fontSize: 	14,
+		fontWeight: 'normal'
+	}
+}
+
+
+
+// IPHONE *********************************************************
+
+".viewAgenda[platform=ios]": { 
+	backgroundColor:Alloy.CFG.WHITE,
+	top: 0
+}
+
+".containerAgenda[platform=ios]": {
+    width: Ti.UI.FILL,
+    backgroundColor: Alloy.CFG.WHITE,
+   // top: 70,
+    layout: 'vertical',
+    top: 0
+}
+
+".scrollableAgendaSlider[platform=ios]": {
+	contentWidth: Ti.UI.FILL,      
+	showVerticalScrollIndicator: 'true',
+	scrollType: 'vertical',
+	backgroundColor: Alloy.CFG.WHITE,
+	layout: "vertical" ,
+	top: 0    
+}
+
+".rowList[platform=ios]": {
+	height: 120,
+	backgroundColor: Alloy.CFG.WHITE,
+	focusable: "true",
+	left: 0,
+	selectedBackgroundColor: Alloy.CFG.RED1
+}
+
+".rowLine[platform=ios]": {
+	height: 1,
+	width: Ti.UI.FILL,
+	backgroundColor: Alloy.CFG.ORANGE3,
+	top: 119
+}
+
+".viewImage[platform=ios]": {
+	height: Ti.UI.FILL,
+	width: 120,
+	left: 0
+	
+}
+
+".productImage[platform=ios]": {
+	height: Ti.UI.FILL,
+	left: 0
+}
+
+".viewDescription[platform=ios]": {
+	top: 10,
+	bottom: 10,
+	left: 130,
+	width: 160,
+	height: Ti.UI.FILL,
+	layout: 'vertical'
+
+}
+
+".textName[platform=ios]": {
+	color: Alloy.CFG.BLACK,
+	font: {
+		fontFamily: Alloy.CFG.GENEVA, 
+		fontSize: 	14,
+		fontWeight: 'bold'
+	},
+	left: 0
+}
+
+
+".icon[platform=ios]": {
+	left: 0,
+	
+}
+
+".iconView[platform=ios]": {
+	height: 20,
+	layout: 'horizontal'
+}
+
+".textDate[platform=ios]": {
+	color: Alloy.CFG.ORANGE3,
+	font: {
+		fontFamily: Alloy.CFG.GENEVA, 
+		fontSize: 	10,
+		fontWeight: 'bold'
+	},
+	left: 3,
+	top: 2
+}
+
+".textDescription[platform=ios]": {
+	color: Alloy.CFG.GREY,
+	font: {
+		fontFamily: Alloy.CFG.GENEVA, 
+		fontSize: 	11,
+		fontWeight: 'normal'
+	},
+	left: 0,
+	top: 0
+}
+
+".iconArrow[platform=ios]": {
+	right: 5
+}
+
+".viewTitle[platform=ios]": {
+	height: 30,
+	width: Ti.UI.FILL,
+	top: 1,
+	backgroundColor: Alloy.CFG.ORANGE3
+}
+
+".textTitle[platform=ios]": {
+	color: Alloy.CFG.WHITE,
+	font: {
+		fontFamily: Alloy.CFG.GENEVA, 
+		fontSize: 	14,
+		fontWeight: 'normal'
+	}
+}
+
+

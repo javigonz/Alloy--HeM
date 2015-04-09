@@ -1,0 +1,327 @@
+// ANDROID *********************************************************
+
+".viewDirectorio[platform=android]": { 
+	backgroundColor:Alloy.CFG.WHITE,
+	top: 0
+}
+
+".containerDirectorio[platform=android]": {
+    height: Ti.UI.FILL,
+    width: Ti.UI.FILL,
+    backgroundColor: Alloy.CFG.WHITE,
+    top: 0,
+    layout: 'vertical'
+}
+
+".scrollableDirectorySlider[platform=android]": {
+	contentWidth: Ti.UI.FILL,      
+	showVerticalScrollIndicator: 'true',
+	scrollType: 'vertical',
+	backgroundColor: Alloy.CFG.WHITE,
+	layout: "vertical",
+	top: 0     
+}
+
+".viewTitle[platform=android]": {
+	height: 30,
+	width: Ti.UI.FILL,
+	top: 1,
+	backgroundColor: Alloy.CFG.BLUE2
+}
+
+".textTitle[platform=android]": {
+	color: Alloy.CFG.WHITE,
+	font: {
+		fontFamily: Alloy.CFG.GENEVA, 
+		fontSize: 	14,
+		fontWeight: 'normal'
+	}
+}
+
+".viewCategories[platform=android]": {
+	height: 60,
+	width: Ti.UI.FILL,
+	top: 0
+}
+
+
+".pickerStyle[platform=android]": {
+	height: 40,
+    width: '100%',
+    paddingLeft: 5,
+    font: {
+		fontFamily: Alloy.CFG.FONT_HELVETICA_NEUE_LT_LIGHT, 
+		fontSize: 	12,
+		fontWeight: 'normal'
+	}
+    
+}
+
+".combo[platform=android]": {
+    height: 40,
+    width: '95%',
+    borderColor: Alloy.CFG.GREY_LIGHT,
+    top: 12,
+    paddingLeft: 5,
+    color: Alloy.CFG.BLACK,
+    left: 10,
+    borderWidth : '2px',
+    backgroundColor:Alloy.CFG.WHITE,
+    font: {
+		fontFamily: Alloy.CFG.FONT_HELVETICA_NEUE_LT_LIGHT, 
+		fontSize: 	14,
+		fontWeight: 'normal'
+	}
+
+}
+
+
+".scrollableAgendaSlider[platform=android]": {	     
+	showVerticalScrollIndicator: 'true',
+	scrollType: 'vertical',
+	width: Ti.UI.FILL, 
+	backgroundColor: Alloy.CFG.WHITE,
+	layout: "vertical" 
+}
+
+".rowList[platform=android]": {
+	height: 100,
+	backgroundColor: Alloy.CFG.WHITE,
+	focusable: "true",
+	left: 0,
+	selectedBackgroundColor: Alloy.CFG.RED1
+}
+
+".rowLine[platform=android]": {
+	height: 1,
+	width: Ti.UI.FILL,
+	backgroundColor: Alloy.CFG.BLUE2,
+	top: 99
+}
+
+".viewImage[platform=android]": {
+	height: Ti.UI.FILL,
+	width: 120,
+	left: 0
+	
+}
+
+".ProductImage[platform=android]": {
+	height: 96,
+	left: 0
+}
+
+
+".viewDescription[platform=android]": {
+	top: 20,
+	bottom: 10,
+	left: 130,
+	width: 200,
+	layout: 'vertical'
+
+}
+
+".textName[platform=android]": {
+	color: Alloy.CFG.BLACK,
+	font: {
+		fontFamily: Alloy.CFG.GENEVA, 
+		fontSize: 	13,
+		fontWeight: 'bold'
+	},
+	left: 0
+}
+
+".icon[platform=android]": {
+	left: 0,
+	
+}
+
+".iconView[platform=android]": {
+	left: 0,
+	height: 50,
+	top: '-2'
+}
+
+".textDate[platform=android]": {
+	color: Alloy.CFG.GREY,
+	font: {
+		fontFamily: Alloy.CFG.GENEVA, 
+		fontSize: 	10,
+		fontWeight: 'normal'
+	},
+	top: 0,
+	left: 0
+}
+
+".textDescription[platform=android]": {
+	color: Alloy.CFG.GREY,
+	font: {
+		fontFamily: Alloy.CFG.GENEVA, 
+		fontSize: 	11,
+		fontWeight: 'normal'
+	},
+	left: 0,
+	top: 0
+}
+
+".iconArrow[platform=android]": {
+	right: 5
+}
+
+
+
+
+// IPHONE *********************************************************
+
+".viewDirectorio[platform=ios]": { 
+	backgroundColor:Alloy.CFG.WHITE,
+	top: 0
+}
+
+".containerDirectorio[platform=ios]": {
+    height: Ti.UI.FILL,
+    width: Ti.UI.FILL,
+    backgroundColor: Alloy.CFG.WHITE,
+    top: 0,
+    layout: 'vertical'
+}
+
+".scrollableDirectorySlider[platform=ios]": {
+	contentWidth: Ti.UI.FILL,      
+	showVerticalScrollIndicator: 'true',
+	scrollType: 'vertical',
+	backgroundColor: Alloy.CFG.WHITE,
+	layout: "vertical"     
+}
+
+".viewTitle[platform=ios]": {
+	height: 30,
+	width: Ti.UI.FILL,
+	top: 1,
+	backgroundColor: Alloy.CFG.BLUE2
+}
+
+".textTitle[platform=ios]": {
+	color: Alloy.CFG.WHITE,
+	font: {
+		fontFamily: Alloy.CFG.GENEVA, 
+		fontSize: 	14,
+		fontWeight: 'normal'
+	}
+}
+
+".viewCategories[platform=ios]": {
+	height: 55,
+	width: Ti.UI.FILL,
+	top: 0
+}
+
+
+".combo[platform=ios]": {
+    height: 30,
+    width: '95%',
+    backgroundColor: Alloy.CFG.WHITE,
+    borderColor: Alloy.CFG.GREY_LIGHT,
+    top: 12,
+    paddingLeft: 5,
+    color: Alloy.CFG.BLACK,
+    font: {
+		fontFamily: Alloy.CFG.GENEVA, 
+		fontSize: 	13,
+		fontWeight: 'normal'
+	}
+
+}
+
+
+".scrollableAgendaSlider[platform=ios]": {
+	contentWidth: Ti.UI.FILL,      
+	showVerticalScrollIndicator: 'true',
+	scrollType: 'vertical',
+	backgroundColor: Alloy.CFG.WHITE,
+	layout: "vertical"     
+}
+
+".rowList[platform=ios]": {
+	height: 100,
+	backgroundColor: Alloy.CFG.WHITE,
+	focusable: "true",
+	left: 0,
+	selectedBackgroundColor: Alloy.CFG.RED1
+}
+
+".rowLine[platform=ios]": {
+	height: 1,
+	width: Ti.UI.FILL,
+	backgroundColor: Alloy.CFG.BLUE2,
+	top: 99
+}
+
+".viewImage[platform=ios]": {
+	height: Ti.UI.FILL,
+	width: 110,
+	left: 0
+	
+}
+
+".ProductImage[platform=ios]": {
+	height: 96,
+	left: 0
+}
+
+
+".viewDescription[platform=ios]": {
+	top: 25,
+	left: 115,
+	width: 160,
+	height: Ti.UI.FILL,
+	layout: 'vertical'
+
+}
+
+".textName[platform=ios]": {
+	color: Alloy.CFG.BLACK,
+	font: {
+		fontFamily: Alloy.CFG.GENEVA, 
+		fontSize: 	13,
+		fontWeight: 'bold'
+	},
+	left: 0
+}
+
+
+".icon[platform=ios]": {
+	left: 0,
+	
+}
+
+".iconView[platform=ios]": {
+	height: 20,
+	layout: 'horizontal'
+}
+
+".textDate[platform=ios]": {
+	color: Alloy.CFG.GREY,
+	font: {
+		fontFamily: Alloy.CFG.GENEVA, 
+		fontSize: 	10,
+		fontWeight: 'normal'
+	},
+	left: 0,
+	top: 2
+}
+
+".textDescription[platform=ios]": {
+	color: Alloy.CFG.GREY,
+	font: {
+		fontFamily: Alloy.CFG.GENEVA, 
+		fontSize: 	11,
+		fontWeight: 'normal'
+	},
+	left: 0,
+	top: 0
+}
+
+".iconArrow[platform=ios]": {
+	right: 5
+}

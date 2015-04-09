@@ -1,0 +1,6 @@
+<Alloy>
+	
+	<!-- Inicio -->
+	<Require id="initContainer" src="initContainer" />
+
+</Alloy>

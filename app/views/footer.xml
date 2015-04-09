@@ -1,0 +1,9 @@
+<Alloy>
+	
+	<View class="viewFooter" id="viewFooter">
+		
+	</View>
+	
+	<View class="viewOver" id="viewOver"></View>
+	
+</Alloy>

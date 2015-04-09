@@ -1,0 +1,16 @@
+.DS_Store
+iTunesConnect.png
+LICENSE
+LICENSE.txt
+manifest
+README
+DISEÑO_GRAFICO-MATERIAL
+BuildPackage
+build
+npm-debug.log
+tmp
+.map
+.project
+.settings
+Thumbs.db
+CHANGELOG.txt

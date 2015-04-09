@@ -1,0 +1,35 @@
+<Alloy>
+	<View class="viewDirectorio" id="viewDirectorio" >
+		
+		
+		<!-- Content -->
+		<View class="containerDirectorio" id="containerDirectorio" >
+			
+			<!-- Título
+			<View class="viewTitle">
+				<Label class="textTitle" id="textTitle" ></Label>
+			</View>-->
+			
+			<!-- Combo de Categorías-->
+			<View class="viewCategories" id="viewCategories">
+				<TextField class="combo" platform="ios" id="comboCategories" touchEnabled="true"  ></TextField>
+				<View platform="android" class="combo" id="comboCategories"  ></View>
+			</View>
+			
+			<ScrollView   class="scrollableDirectorySlider"   showPagingControl="false" id="scrollableDirectorySlider" >
+					
+			</ScrollView>
+		
+		</View>
+		
+		<!-- Cabecera 
+		<Require id="header" src="header"  />-->
+		
+		<!-- Menú 
+		<Require id="footer" src="footer"  />-->
+		
+		<!-- Loading 
+		<Require id="loading" src="loading"  />-->
+		
+	</View>
+</Alloy>

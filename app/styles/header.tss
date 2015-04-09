@@ -1,0 +1,79 @@
+// ANDROID *********************************************************
+
+".viewHeader[platform=android]": { 
+	backgroundColor: Alloy.CFG.BLUE2,
+	height: 45,
+	width: Ti.UI.FILL,
+	top: 0
+}
+
+".buttonBack[platform=android]":{
+    top: 0,
+    right: 0,
+    width: 45
+}
+
+".imageButtonBack[platform=android]":{
+    right: 10
+}
+
+".separator[platform=android]":{
+    width: 1,
+    height: Ti.UI.FILL,
+    backgroundColor: Alloy.CFG.WHITE,
+    left: 0,
+    top: 0
+}
+
+".logoHeader[platform=android]":{
+    left: 10,
+    top: 0
+}
+
+".logo[platform=android]":{
+    left: 0,
+    top: 0
+}
+
+
+
+// IPHONE *********************************************************
+
+".viewHeader[platform=ios]": { 
+	backgroundColor: Alloy.CFG.BLUE2,
+	height: 50,
+	width: Ti.UI.FILL,
+	top: 20
+}
+
+".buttonBack[platform=ios]":{
+    top: 0,
+    right: 0,
+    width: 45
+}
+
+".imageButtonBack[platform=ios]":{
+    right: 10,
+    width: 24,
+    height: 28
+}
+
+".separator[platform=ios]":{
+    width: 1,
+    height: Ti.UI.FILL,
+    backgroundColor: Alloy.CFG.WHITE,
+    left: 0,
+    top: 0
+}
+
+".logoHeader[platform=ios]":{
+    left: 0,
+    top: 0,
+    width: 175
+
+}
+
+".logo[platform=ios]":{
+    left: 0,
+    top: 0
+}

@@ -1,0 +1,26 @@
+<Alloy>
+	<View class="viewDirectorioDetailMap" id="viewDirectorioDetailMap" >
+		
+		
+		<View class="containerDirectorioDetailMap" id="containerDirectorioDetailMap" >
+			
+			<!-- Título
+			<View class="viewTitle">
+				<Label class="textTitle" id="textTitle" ></Label>
+			</View>-->
+
+		
+		</View>
+
+		
+		<!-- Cabecera 
+		<Require id="header" src="header"  />-->
+		
+		<!-- Menú 
+		<Require id="footer" src="footer"  />-->
+		
+		<!-- Loading
+		<Require id="loading" src="loading"  />--> 
+		
+	</View>
+</Alloy>

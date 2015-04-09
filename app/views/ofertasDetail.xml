@@ -1,0 +1,30 @@
+<Alloy>
+	<View class="viewOfertasDetail" id="viewOfertasDetail" >
+		
+		 <!--Content Scrollable -->
+		<ScrollView  class="containerScroll" showPagingControl="false" id="containerScroll" > 
+			
+			<!-- Content -->
+			<View class="containerOfertasDetail" id="containerOfertasDetail" >
+				
+				<!-- Título
+				<View class="viewTitle">
+					<Label class="textTitle" id="textTitle" ></Label>
+				</View>-->
+			
+			
+			</View>
+			
+		</ScrollView>	
+		
+		<!-- Cabecera 
+		<Require id="header" src="header"  />-->
+		
+		<!-- Menú 
+		<Require id="footer" src="footer"  />-->
+		
+		<!-- Loading 
+		<Require id="loading" src="loading"  />-->
+		
+	</View>
+</Alloy>

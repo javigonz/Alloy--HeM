@@ -1,0 +1,30 @@
+<Alloy>
+	
+	<Window class="winInitContainer" id="winInitContainer" navBarHidden="true" tabBarHidden="true" >
+		
+		<!-- Fondo blanco -->
+		<View  class="viewBackground" ></View>	
+		
+		
+		<!-- Content -->
+		<View  id="viewInitContainer" class="viewInitContainer" > 
+			 
+			
+		
+		</View>	
+		
+		<!-- Cabecera -->
+		<Require id="header" src="header"  />
+		
+		<!-- Menú -->
+		<Require id="footer" src="footer"  />
+		
+		<!-- Loading -->
+		<Require id="loading" src="loading"  />	
+		
+		
+	</Window>
+	
+	
+	
+</Alloy>

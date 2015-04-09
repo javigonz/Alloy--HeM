@@ -1,0 +1,68 @@
+// ANDROID *********************************************************
+
+".viewDirectorioDetailMap[platform=android]": { 
+	backgroundColor:Alloy.CFG.WHITE,
+	top: 0
+}
+
+".containerDirectorioDetailMap[platform=android]": {
+    height: Ti.UI.FILL,
+    width: Ti.UI.FILL,
+    backgroundColor: Alloy.CFG.WHITE,
+    top: 0,
+    layout: 'vertical'
+}
+
+
+
+".viewTitle[platform=android]": {
+	height: 30,
+	width: Ti.UI.FILL,
+	top: 1,
+	backgroundColor: Alloy.CFG.BLUE2
+}
+
+".textTitle[platform=android]": {
+	color: Alloy.CFG.WHITE,
+	font: {
+		fontFamily: Alloy.CFG.GENEVA, 
+		fontSize: 	14,
+		fontWeight: 'normal'
+	}
+}
+
+
+
+
+// IPHONE *********************************************************
+
+".viewDirectorioDetailMap[platform=ios]": { 
+	backgroundColor:Alloy.CFG.WHITE,
+	top: 0
+}
+
+".containerDirectorioDetailMap[platform=ios]": {
+    height: Ti.UI.FILL,
+    width: Ti.UI.FILL,
+    backgroundColor: Alloy.CFG.WHITE,
+    top: 0,
+    layout: 'vertical'
+}
+
+
+
+".viewTitle[platform=ios]": {
+	height: 30,
+	width: Ti.UI.FILL,
+	top: 1,
+	backgroundColor: Alloy.CFG.BLUE2
+}
+
+".textTitle[platform=ios]": {
+	color: Alloy.CFG.WHITE,
+	font: {
+		fontFamily: Alloy.CFG.GENEVA, 
+		fontSize: 	14,
+		fontWeight: 'normal'
+	}
+}
