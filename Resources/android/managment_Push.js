@@ -18,14 +18,9 @@ var blackberryOptions = {
 var onReceive = function(evt) {
     var payload = JSON.parse(evt.payload);
     "" == payload._id ? managment_View.OpenSectionParam("hechoEnMijas", [], "", Alloy.Globals.ActualContainer) : managment_View.OpenSectionParam("hechoEnMijasDetail", [ payload._id ], "", Alloy.Globals.ActualContainer);
-    console.log("A push notification was received!" + JSON.stringify(evt));
 };
 
-var onLaunched = function(evt) {
-    var payload = JSON.parse(evt.payload);
-    "" == payload._id ? managment_View.OpenSectionParam("hechoEnMijas", [], "", Alloy.Globals.ActualContainer) : managment_View.OpenSectionParam("hechoEnMijasDetail", [ payload._id ], "", Alloy.Globals.ActualContainer);
-    console.log("A push notification was received!" + JSON.stringify(evt));
-};
+var onLaunched = function() {};
 
 var onFocused = function(evt) {
     console.log("A push notification was received!" + JSON.stringify(evt));
@@ -36,6 +31,8 @@ var ACSP = require("acspush");
 var ACSPush;
 
 var ACSPush = new ACSP.ACSPush("javi", "javi");
+
+Ti.API.info("registrar device al PUSH");
 
 var channel = "AllUsers";
 

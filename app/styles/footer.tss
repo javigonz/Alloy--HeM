@@ -89,33 +89,29 @@
 
 
 ".MenuImage1[platform=android]": {
-    left: 10,
-    right: 10,
-    top: 15,
+    
+    top: 10,
+    width: 30
 }
 
 ".MenuImage2[platform=android]": {
-    left: 10,
-    right: 10,
-    top: 15,
+   top: 10,
+    width: 30
 }
 
 ".MenuImage3[platform=android]": {
-    left: 10,
-    right: 10,
-    top: 15,
+    top: 10,
+    width: 30
 }
 
 ".MenuImage4[platform=android]": {
-    left: 10,
-    right: 10,
-    top: 15,
+   top: 10,
+    width: 30
 }
 
 ".MenuImage5[platform=android]": {
-    left: 10,
-    right: 10,
-    top: 15,
+    top: 10,
+    width: 30
 }
 
 

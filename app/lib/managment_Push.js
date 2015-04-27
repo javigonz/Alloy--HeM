@@ -21,37 +21,35 @@ var managment_View = require('managment_View');
 	var onReceive=function(evt){
 	    //alert('A push notification was received!');
 	    
+	    //console.log('A push notification was received!' + JSON.stringify(evt));
 	    var payload = JSON.parse(evt.payload);
-	    //managment_View.OpenInfoWindow(payload._id);
+	    //console.log('Payload: ' + payload);
+	    //console.log('Payload _id: ' + payload._id);
+	    //console.log('Payload alert: ' + payload.android.alert);
 	    if (payload._id == '')
 	    {
 	    	 managment_View.OpenSectionParam('hechoEnMijas',[],'', Alloy.Globals.ActualContainer);
 	    }
 	    else
 	    {
-	    	 managment_View.OpenSectionParam('hechoEnMijasDetail',[payload._id],'', Alloy.Globals.ActualContainer);
+	    	if(Ti.Platform.osname =='android') {
+	    	 	managment_View.OpenSectionParam('hechoEnMijasDetail',[payload._id],'', Alloy.Globals.ActualContainer);
+	    	 	//console.log('Payload id: ' + payload.android._id);
+	    	}
+	    	else
+	    	{
+	    		managment_View.OpenSectionParam('hechoEnMijasDetail',[payload._id],'', Alloy.Globals.ActualContainer);
+	    		//console.log(payload._id);
+	    	}
 	    }
 	   
 	   
-	   console.log('A push notification was received!' + JSON.stringify(evt));
+	  
 	};
 	
 	// set android-only event
 	var onLaunched=function(evt){
-	    //alert('A push notification was received - onLaunched');
-	   
-	    var payload = JSON.parse(evt.payload);
-	    //managment_View.OpenInfoWindow(payload._id);
-	    if (payload._id == '')
-	    {
-	    	 managment_View.OpenSectionParam('hechoEnMijas',[],'', Alloy.Globals.ActualContainer);
-	    }
-	    else
-	    {
-	    	 managment_View.OpenSectionParam('hechoEnMijasDetail',[payload._id],'', Alloy.Globals.ActualContainer);
-	    }
-	    
-	    console.log('A push notification was received!' + JSON.stringify(evt));
+	  
 	};
 	
 	// set android-only event
@@ -71,10 +69,10 @@ var managment_View = require('managment_View');
 	else
 	{
 		// create instance with your own or the user's username and password
-		var ACSPush=new ACSP.ACSPush('javi','javi');
+		var ACSPush=new ACSP.ACSPush('javi', 'javi');
 	}
 		
-	
+	Ti.API.info('registrar device al PUSH');
 	
 	// set the channel to subscribe to
 	var channel='AllUsers';
