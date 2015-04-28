@@ -126,7 +126,7 @@ function Controller() {
                 label2.applyProperties(textDate);
                 view1.add(imageRemote1);
                 view2.add(label1);
-                view3.add(label2);
+                view2.add(label2);
                 view2.add(view3);
                 row1.add(view1);
                 row1.add(view2);

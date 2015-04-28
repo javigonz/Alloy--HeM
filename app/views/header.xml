@@ -3,7 +3,7 @@
 	<View class="viewHeader">
 		
 		<View class="logoHeader" id="LogoHeader" >
-			<ImageView class="logo"  image="/images/Logo.png"></ImageView>
+			<ImageView class="logo"  image="/images/logo.png"></ImageView>
 		</View>
 		
 		

@@ -148,7 +148,7 @@
 }
 
 ".rowList[platform=ios]": {
-	height: 120,
+	height: 130,
 	backgroundColor: Alloy.CFG.WHITE,
 	focusable: "true",
 	left: 0,
@@ -159,7 +159,7 @@
 	height: 1,
 	width: Ti.UI.FILL,
 	backgroundColor: Alloy.CFG.ORANGE3,
-	top: 119
+	top: 129
 }
 
 ".viewImage[platform=ios]": {

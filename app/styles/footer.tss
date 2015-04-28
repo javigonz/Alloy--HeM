@@ -209,31 +209,31 @@
 
 
 ".MenuImage1[platform=ios]": {
-	width: 23,
-	height: 22,
+	width: 30,
+	height: 29,
 	top: 12
 }
 
 ".MenuImage2[platform=ios]": {
-	width: 24,
-	height: 22,
+	width: 30,
+	height: 28,
 	top: 12
 }
 
 ".MenuImage3[platform=ios]": {
-	width: 20,
-	height: 23,
+	width: 26,
+	height: 30,
 	top: 12
 }
 
 ".MenuImage4[platform=ios]": {
-	width: 23,
-	height: 23,
+	width: 30,
+	height: 30,
 	top: 12
 }
 
 ".MenuImage5[platform=ios]": {
-	width: 23,
-	height: 25,
+	width: 30,
+	height: 33,
 	top: 12
 }

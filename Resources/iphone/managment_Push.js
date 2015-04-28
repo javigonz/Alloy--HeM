@@ -17,15 +17,10 @@ var blackberryOptions = {
 
 var onReceive = function(evt) {
     var payload = JSON.parse(evt.payload);
-    "" == payload._id ? managment_View.OpenSectionParam("hechoEnMijas", [], "", Alloy.Globals.ActualContainer) : managment_View.OpenSectionParam("hechoEnMijasDetail", [ payload._id ], "", Alloy.Globals.ActualContainer);
-    console.log("A push notification was received!" + JSON.stringify(evt));
+    "" == payload._id ? managment_View.OpenSectionParam("hechoEnMijas", [], "", Alloy.Globals.ActualContainer) : "android" == Ti.Platform.osname ? managment_View.OpenSectionParam("hechoEnMijasDetail", [ payload._id ], "", Alloy.Globals.ActualContainer) : managment_View.OpenSectionParam("hechoEnMijasDetail", [ payload._id ], "", Alloy.Globals.ActualContainer);
 };
 
-var onLaunched = function(evt) {
-    var payload = JSON.parse(evt.payload);
-    "" == payload._id ? managment_View.OpenSectionParam("hechoEnMijas", [], "", Alloy.Globals.ActualContainer) : managment_View.OpenSectionParam("hechoEnMijasDetail", [ payload._id ], "", Alloy.Globals.ActualContainer);
-    console.log("A push notification was received!" + JSON.stringify(evt));
-};
+var onLaunched = function() {};
 
 var onFocused = function(evt) {
     console.log("A push notification was received!" + JSON.stringify(evt));
@@ -34,6 +29,8 @@ var onFocused = function(evt) {
 var ACSP = require("acspush");
 
 if ("iphone" == Ti.Platform.osname) var ACSPush = new ACSP.ACSPush(); else var ACSPush = new ACSP.ACSPush("javi", "javi");
+
+Ti.API.info("registrar device al PUSH");
 
 var channel = "AllUsers";
 
