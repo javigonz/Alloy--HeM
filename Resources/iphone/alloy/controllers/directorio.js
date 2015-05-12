@@ -72,8 +72,9 @@ function Controller() {
             var iconArrow = $.createStyle({
                 classes: [ "iconArrow" ]
             });
+            var rows = [];
             for (var i = 0; i <= datamodel_EmpresasSector.result.length - 1; i++) {
-                var row1 = Ti.UI.createView({
+                var row1 = Ti.UI.createTableViewRow({
                     id: datamodel_EmpresasSector.result[i].id
                 });
                 row1.applyProperties(rowList);
@@ -130,11 +131,11 @@ function Controller() {
                 view2.add(view3);
                 row1.add(view1);
                 row1.add(view2);
-                row1.add(row1Line);
                 row1.add(row1Arrow);
-                $.scrollableDirectorySlider.add(row1);
+                rows.push(row1);
             }
         } else managment_View.OpenInfoWindow(L("text_6"));
+        $.scrollableAgendaSlider.setData(rows);
         Ti.App.fireEvent("closeLoading");
     }
     function createComboCategories(picker_data) {
@@ -182,7 +183,6 @@ function Controller() {
                 $.comboCategories.value = picker.getSelectedRow(0).title;
                 picker_view.animate(slide_out);
                 Ti.App.fireEvent("openLoading");
-                utils.removeAllChildren($.scrollableDirectorySlider);
                 Ti.App.addEventListener("loadEmpresasSector", loadEmpresasSector);
                 managment_Data.LoadWebService_Empresas_Sector(picker.getSelectedRow(0).id);
             });
@@ -204,7 +204,6 @@ function Controller() {
             picker.addEventListener("change", function() {
                 $.comboCategories.value = picker.getSelectedRow(0).title;
                 Ti.App.fireEvent("openLoading");
-                utils.removeAllChildren($.scrollableDirectorySlider);
                 Ti.App.addEventListener("loadEmpresasSector", loadEmpresasSector);
                 managment_Data.LoadWebService_Empresas_Sector(picker.getSelectedRow(0).id);
             });
@@ -246,45 +245,46 @@ function Controller() {
     });
     $.__views.viewDirectorio.add($.__views.containerDirectorio);
     $.__views.viewCategories = Ti.UI.createView({
-        height: 55,
+        height: 60,
         width: Ti.UI.FILL,
         top: 0,
         id: "viewCategories"
     });
     $.__views.containerDirectorio.add($.__views.viewCategories);
     $.__views.comboCategories = Ti.UI.createTextField({
-        height: 30,
+        height: 40,
         width: "95%",
-        backgroundColor: Alloy.CFG.WHITE,
         borderColor: Alloy.CFG.GREY_LIGHT,
         top: 12,
         paddingLeft: 5,
         color: Alloy.CFG.BLACK,
+        left: 10,
+        borderWidth: "2px",
+        backgroundColor: Alloy.CFG.WHITE,
         font: {
-            fontFamily: Alloy.CFG.GENEVA,
-            fontSize: 13,
+            fontFamily: Alloy.CFG.FONT_HELVETICA_NEUE_LT_LIGHT,
+            fontSize: 14,
             fontWeight: "normal"
         },
         touchEnabled: true,
         id: "comboCategories"
     });
     $.__views.viewCategories.add($.__views.comboCategories);
-    $.__views.scrollableDirectorySlider = Ti.UI.createScrollView({
-        contentWidth: Ti.UI.FILL,
+    $.__views.scrollableAgendaSlider = Ti.UI.createTableView({
         showVerticalScrollIndicator: "true",
         scrollType: "vertical",
+        width: Ti.UI.FILL,
         backgroundColor: Alloy.CFG.WHITE,
         layout: "vertical",
-        showPagingControl: "false",
-        id: "scrollableDirectorySlider"
+        id: "scrollableAgendaSlider"
     });
-    $.__views.containerDirectorio.add($.__views.scrollableDirectorySlider);
+    $.__views.containerDirectorio.add($.__views.scrollableAgendaSlider);
     exports.destroy = function() {};
     _.extend($, $.__views);
     var managment_View = require("managment_View");
     var managment_Data = require("managment_Data");
     var remoteView = require("createRemoteImageView");
-    var utils = require("utils");
+    require("utils");
     show();
     _.extend($, exports);
 }

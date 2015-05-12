@@ -52,11 +52,12 @@ function loadHechoEnMijas()
 		var icon = $.createStyle({classes: ['icon']});
 		var iconArrow = $.createStyle({classes: ['iconArrow']});
 		
+		var rows = [];
 		
 		for (var i=0;i<=datamodel_HechoEnMijas.result.length-1;i++)
 		{
 			//Contenedor principal 
-			var row1 = Ti.UI.createView({
+			var row1 = Ti.UI.createTableViewRow({
 						id: datamodel_HechoEnMijas.result[i].id
 			});
 		    row1.applyProperties(rowList);
@@ -147,9 +148,10 @@ function loadHechoEnMijas()
 		    row1.add(view1);
 		    row1.add(view2);
 		    
-		    row1.add(row1Line);
+		    //row1.add(row1Line);
 		    row1.add(row1Arrow);
-		    $.scrollableAgendaSlider.add(row1);
+		    
+		     rows.push(row1);
 
 			
 		}	
@@ -160,6 +162,7 @@ function loadHechoEnMijas()
 		
 	}
 	
+	$.scrollableAgendaSlider.setData(rows);
 	Ti.App.fireEvent('closeLoading');
 	
 }

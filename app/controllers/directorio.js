@@ -88,11 +88,12 @@ function loadEmpresasSector()
 		var icon = $.createStyle({classes: ['icon']});
 		var iconArrow = $.createStyle({classes: ['iconArrow']});
 		
+		var rows = [];
 		
 		for (var i=0;i<=datamodel_EmpresasSector.result.length-1;i++)
 		{
 			//Contenedor principal 
-			var row1 = Ti.UI.createView({
+			var row1 = Ti.UI.createTableViewRow({
 						id: datamodel_EmpresasSector.result[i].id
 			});
 		    row1.applyProperties(rowList);
@@ -168,9 +169,11 @@ function loadEmpresasSector()
 		    row1.add(view1);
 		    row1.add(view2);
 		    
-		    row1.add(row1Line);
+		   // row1.add(row1Line);
 		    row1.add(row1Arrow);
-		    $.scrollableDirectorySlider.add(row1);
+		    //$.scrollableDirectorySlider.add(row1);
+		    
+		    rows.push(row1);
 
 			
 		}	
@@ -181,6 +184,7 @@ function loadEmpresasSector()
 		
 	}
 	
+	$.scrollableAgendaSlider.setData(rows);
 	Ti.App.fireEvent('closeLoading');
 	
 }
@@ -248,7 +252,7 @@ function createComboCategories(picker_data)
 				
 				//Limpio antes todo el contenido
 				Ti.App.fireEvent('openLoading');
-				utils.removeAllChildren($.scrollableDirectorySlider);
+				//utils.removeAllChildren($.scrollableDirectorySlider);
 			
 				//Carga WebServie de Empresas de una Categoría
 				Ti.App.addEventListener('loadEmpresasSector', loadEmpresasSector);
@@ -285,7 +289,7 @@ function createComboCategories(picker_data)
 						
 						//Limpio antes todo el contenido
 						Ti.App.fireEvent('openLoading');
-						utils.removeAllChildren($.scrollableDirectorySlider);
+						//utils.removeAllChildren($.scrollableDirectorySlider);
 				
 						//Carga WebServie de Empresas de una Categoría
 						Ti.App.addEventListener('loadEmpresasSector', loadEmpresasSector);

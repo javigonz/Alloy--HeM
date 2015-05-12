@@ -22,6 +22,11 @@
 	top: 0     
 }
 
+".scrollableAgendaSlider[platform=android]": {	     
+	separatorColor: Alloy.CFG.GREY_LIGHT,
+    top: 0
+}
+
 ".viewTitle[platform=android]": {
 	height: 30,
 	width: Ti.UI.FILL,
@@ -85,7 +90,7 @@
 }
 
 ".rowList[platform=android]": {
-	height: 100,
+	height: Ti.UI.SIZE,
 	backgroundColor: Alloy.CFG.WHITE,
 	focusable: "true",
 	left: 0,
@@ -99,21 +104,23 @@
 	top: 99
 }
 
+
 ".viewImage[platform=android]": {
-	height: Ti.UI.FILL,
+	height: Ti.UI.SIZE,
 	width: 120,
-	left: 0
-	
+	left: 0,
+	top: 10,
+	bottom: 10	
 }
 
-".ProductImage[platform=android]": {
-	height: 96,
+".productImage[platform=android]": {
 	left: 0
 }
 
 
 ".viewDescription[platform=android]": {
-	top: 20,
+	height: Ti.UI.SIZE,
+	top: 10,
 	bottom: 10,
 	left: 130,
 	width: 200,
@@ -139,14 +146,14 @@
 ".iconView[platform=android]": {
 	left: 0,
 	height: 50,
-	top: '-2'
+	top: 0
 }
 
 ".textDate[platform=android]": {
 	color: Alloy.CFG.GREY,
 	font: {
 		fontFamily: Alloy.CFG.GENEVA, 
-		fontSize: 	10,
+		fontSize: 	11,
 		fontWeight: 'normal'
 	},
 	top: 0,
@@ -191,7 +198,13 @@
 	showVerticalScrollIndicator: 'true',
 	scrollType: 'vertical',
 	backgroundColor: Alloy.CFG.WHITE,
-	layout: "vertical"     
+	layout: "vertical",
+	top: 0     
+}
+
+".scrollableAgendaSlider[platform=ios]": {	     
+	separatorColor: Alloy.CFG.GREY_LIGHT,
+    top: 0
 }
 
 ".viewTitle[platform=ios]": {
@@ -211,68 +224,85 @@
 }
 
 ".viewCategories[platform=ios]": {
-	height: 55,
+	height: 60,
 	width: Ti.UI.FILL,
 	top: 0
 }
 
 
+".pickerStyle[platform=ios]": {
+	height: 40,
+    width: '100%',
+    paddingLeft: 5,
+    font: {
+		fontFamily: Alloy.CFG.FONT_HELVETICA_NEUE_LT_LIGHT, 
+		fontSize: 	12,
+		fontWeight: 'normal'
+	}
+    
+}
+
 ".combo[platform=ios]": {
-    height: 30,
+    height: 40,
     width: '95%',
-    backgroundColor: Alloy.CFG.WHITE,
     borderColor: Alloy.CFG.GREY_LIGHT,
     top: 12,
     paddingLeft: 5,
     color: Alloy.CFG.BLACK,
+    left: 10,
+    borderWidth : '2px',
+    backgroundColor:Alloy.CFG.WHITE,
     font: {
-		fontFamily: Alloy.CFG.GENEVA, 
-		fontSize: 	13,
+		fontFamily: Alloy.CFG.FONT_HELVETICA_NEUE_LT_LIGHT, 
+		fontSize: 	14,
 		fontWeight: 'normal'
 	}
 
 }
 
 
-".scrollableAgendaSlider[platform=ios]": {
-	contentWidth: Ti.UI.FILL,      
+".scrollableAgendaSlider[platform=ios]": {	     
 	showVerticalScrollIndicator: 'true',
 	scrollType: 'vertical',
+	width: Ti.UI.FILL, 
 	backgroundColor: Alloy.CFG.WHITE,
-	layout: "vertical"     
+	layout: "vertical" 
 }
 
 ".rowList[platform=ios]": {
-	height: 120,
+	height: Ti.UI.SIZE,
 	backgroundColor: Alloy.CFG.WHITE,
 	focusable: "true",
 	left: 0,
-	selectedBackgroundColor: Alloy.CFG.RED1
+	selectedBackgroundColor: Alloy.CFG.BLUE1
 }
 
 ".rowLine[platform=ios]": {
 	height: 1,
 	width: Ti.UI.FILL,
 	backgroundColor: Alloy.CFG.BLUE2,
-	top: 119
+	top: 99
 }
+
 
 ".viewImage[platform=ios]": {
-	height: Ti.UI.FILL,
-	width: 110,
-	left: 0
-	
+	height: Ti.UI.SIZE,
+	width: 120,
+	left: 0,
+	top: 10,
+	bottom: 10	
 }
 
-".ProductImage[platform=ios]": {
-	height: 96,
-	left: 10
+".productImage[platform=ios]": {
+	left: 0
 }
 
 
 ".viewDescription[platform=ios]": {
+	height: Ti.UI.SIZE,
 	top: 10,
-	left: 115,
+	bottom: 10,
+	left: 130,
 	width: 160,
 	layout: 'vertical'
 
@@ -288,26 +318,26 @@
 	left: 0
 }
 
-
 ".icon[platform=ios]": {
 	left: 0,
 	
 }
 
 ".iconView[platform=ios]": {
-	height: 20,
-	layout: 'horizontal'
+	left: 0,
+	height: 50,
+	top: 0
 }
 
 ".textDate[platform=ios]": {
 	color: Alloy.CFG.GREY,
 	font: {
 		fontFamily: Alloy.CFG.GENEVA, 
-		fontSize: 	10,
+		fontSize: 	11,
 		fontWeight: 'normal'
 	},
-	left: 0,
-	top: 2
+	top: 0,
+	left: 0
 }
 
 ".textDescription[platform=ios]": {
@@ -319,9 +349,10 @@
 	},
 	left: 0,
 	top: 0
-	
 }
 
 ".iconArrow[platform=ios]": {
 	right: 5
 }
+
+

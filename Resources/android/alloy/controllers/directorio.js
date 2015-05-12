@@ -72,8 +72,9 @@ function Controller() {
             var iconArrow = $.createStyle({
                 classes: [ "iconArrow" ]
             });
+            var rows = [];
             for (var i = 0; i <= datamodel_EmpresasSector.result.length - 1; i++) {
-                var row1 = Ti.UI.createView({
+                var row1 = Ti.UI.createTableViewRow({
                     id: datamodel_EmpresasSector.result[i].id
                 });
                 row1.applyProperties(rowList);
@@ -118,15 +119,15 @@ function Controller() {
                 label2.applyProperties(textDate);
                 view1.add(imageRemote1);
                 view2.add(label1);
-                view3.add(label2);
+                view2.add(label2);
                 view2.add(view3);
                 row1.add(view1);
                 row1.add(view2);
-                row1.add(row1Line);
                 row1.add(row1Arrow);
-                $.scrollableDirectorySlider.add(row1);
+                rows.push(row1);
             }
         } else managment_View.OpenInfoWindow(L("text_6"));
+        $.scrollableAgendaSlider.setData(rows);
         Ti.App.fireEvent("closeLoading");
     }
     function createComboCategories(picker_data) {
@@ -141,7 +142,6 @@ function Controller() {
         picker.addEventListener("change", function() {
             $.comboCategories.value = picker.getSelectedRow(0).title;
             Ti.App.fireEvent("openLoading");
-            utils.removeAllChildren($.scrollableDirectorySlider);
             Ti.App.addEventListener("loadEmpresasSector", loadEmpresasSector);
             managment_Data.LoadWebService_Empresas_Sector(picker.getSelectedRow(0).id);
         });
@@ -206,23 +206,21 @@ function Controller() {
         id: "comboCategories"
     });
     $.__views.viewCategories.add($.__views.comboCategories);
-    $.__views.scrollableDirectorySlider = Ti.UI.createScrollView({
-        contentWidth: Ti.UI.FILL,
+    $.__views.scrollableAgendaSlider = Ti.UI.createTableView({
         showVerticalScrollIndicator: "true",
         scrollType: "vertical",
+        width: Ti.UI.FILL,
         backgroundColor: Alloy.CFG.WHITE,
         layout: "vertical",
-        top: 0,
-        showPagingControl: "false",
-        id: "scrollableDirectorySlider"
+        id: "scrollableAgendaSlider"
     });
-    $.__views.containerDirectorio.add($.__views.scrollableDirectorySlider);
+    $.__views.containerDirectorio.add($.__views.scrollableAgendaSlider);
     exports.destroy = function() {};
     _.extend($, $.__views);
     var managment_View = require("managment_View");
     var managment_Data = require("managment_Data");
     require("createRemoteImageView");
-    var utils = require("utils");
+    require("utils");
     show();
     _.extend($, exports);
 }

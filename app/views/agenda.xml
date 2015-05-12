@@ -1,29 +1,9 @@
 <Alloy>
 	<View class="viewAgenda" id="viewAgenda" >
-		
-		
-		<!-- Content -->
-		<View class="containerAgenda" id="containerAgenda" >
-			
-			<!-- Título
-			<View class="viewTitle">
-				<Label class="textTitle" id="textTitle" ></Label>
-			</View>-->
-			
-			<ScrollView   class="scrollableAgendaSlider"   showPagingControl="false" id="scrollableAgendaSlider" >
+
+		<TableView   class="scrollableAgendaSlider"    id="scrollableAgendaSlider" >
 					
-			</ScrollView>
-		
-		</View>
-		
-		<!-- Cabecera 
-		<Require id="header" src="header"  />-->
-		
-		<!-- Menú 
-		<Require id="footer" src="footer"  />-->
-		
-		<!-- Loading 
-		<Require id="loading" src="loading"  />-->
+		</TableView>
 		
 	</View>
 </Alloy>

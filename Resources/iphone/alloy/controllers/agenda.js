@@ -49,8 +49,9 @@ function Controller() {
             var iconArrow = $.createStyle({
                 classes: [ "iconArrow" ]
             });
+            var rows = [];
             for (var i = 0; i <= datamodel_Agenda.result.length - 1; i++) {
-                var row1 = Ti.UI.createView({
+                var row1 = Ti.UI.createTableViewRow({
                     id: datamodel_Agenda.result[i].id
                 });
                 row1.applyProperties(rowList);
@@ -118,11 +119,11 @@ function Controller() {
                 view2.add(label3);
                 row1.add(view1);
                 row1.add(view2);
-                row1.add(row1Line);
                 row1.add(row1Arrow);
-                $.scrollableAgendaSlider.add(row1);
+                rows.push(row1);
             }
         } else managment_View.OpenInfoWindow(L("text_6"));
+        $.scrollableAgendaSlider.setData(rows);
         Ti.App.fireEvent("closeLoading");
     }
     function handlerEvent_agendaDetail(e) {
@@ -150,25 +151,12 @@ function Controller() {
         id: "viewAgenda"
     });
     $.__views.viewAgenda && $.addTopLevelView($.__views.viewAgenda);
-    $.__views.containerAgenda = Ti.UI.createView({
-        width: Ti.UI.FILL,
-        backgroundColor: Alloy.CFG.WHITE,
-        layout: "vertical",
+    $.__views.scrollableAgendaSlider = Ti.UI.createTableView({
+        separatorColor: Alloy.CFG.GREY_LIGHT,
         top: 0,
-        id: "containerAgenda"
-    });
-    $.__views.viewAgenda.add($.__views.containerAgenda);
-    $.__views.scrollableAgendaSlider = Ti.UI.createScrollView({
-        contentWidth: Ti.UI.FILL,
-        showVerticalScrollIndicator: "true",
-        scrollType: "vertical",
-        backgroundColor: Alloy.CFG.WHITE,
-        layout: "vertical",
-        top: 0,
-        showPagingControl: "false",
         id: "scrollableAgendaSlider"
     });
-    $.__views.containerAgenda.add($.__views.scrollableAgendaSlider);
+    $.__views.viewAgenda.add($.__views.scrollableAgendaSlider);
     exports.destroy = function() {};
     _.extend($, $.__views);
     var managment_View = require("managment_View");

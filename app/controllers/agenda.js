@@ -52,11 +52,12 @@ function loadAgenda()
 		var icon = $.createStyle({classes: ['icon']});
 		var iconArrow = $.createStyle({classes: ['iconArrow']});
 		
+		var rows = [];
 		
 		for (var i=0;i<=datamodel_Agenda.result.length-1;i++)
 		{
 			//Contenedor principal 
-			var row1 = Ti.UI.createView({
+			var row1 = Ti.UI.createTableViewRow({
 					   id: datamodel_Agenda.result[i].id
 			});
 		    row1.applyProperties(rowList);
@@ -145,10 +146,10 @@ function loadAgenda()
 		    view2.add(label3);
 		    row1.add(view1);
 		    row1.add(view2);
-		    
-		    row1.add(row1Line);
+		  
 		    row1.add(row1Arrow);
-		    $.scrollableAgendaSlider.add(row1);
+		    
+		    rows.push(row1);
 
 			
 		}	
@@ -158,6 +159,8 @@ function loadAgenda()
 		managment_View.OpenInfoWindow( L('text_6'));
 		
 	}
+	
+	$.scrollableAgendaSlider.setData(rows);
 	
 	Ti.App.fireEvent('closeLoading');
 	

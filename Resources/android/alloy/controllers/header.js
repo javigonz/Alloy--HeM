@@ -45,7 +45,7 @@ function Controller() {
     $.__views.__alloyId0 = Ti.UI.createImageView({
         left: 0,
         top: 0,
-        image: "/images/Logo.png",
+        image: "/images/logo.png",
         id: "__alloyId0"
     });
     $.__views.LogoHeader.add($.__views.__alloyId0);

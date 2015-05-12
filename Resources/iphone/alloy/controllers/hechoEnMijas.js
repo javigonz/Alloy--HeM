@@ -49,8 +49,9 @@ function Controller() {
             var iconArrow = $.createStyle({
                 classes: [ "iconArrow" ]
             });
+            var rows = [];
             for (var i = 0; i <= datamodel_HechoEnMijas.result.length - 1; i++) {
-                var row1 = Ti.UI.createView({
+                var row1 = Ti.UI.createTableViewRow({
                     id: datamodel_HechoEnMijas.result[i].id
                 });
                 row1.applyProperties(rowList);
@@ -119,11 +120,11 @@ function Controller() {
                 view2.add(label3);
                 row1.add(view1);
                 row1.add(view2);
-                row1.add(row1Line);
                 row1.add(row1Arrow);
-                $.scrollableAgendaSlider.add(row1);
+                rows.push(row1);
             }
         } else managment_View.OpenInfoWindow(L("text_6"));
+        $.scrollableAgendaSlider.setData(rows);
         Ti.App.fireEvent("closeLoading");
     }
     function handlerEvent_hechoEnMijasDetail(e) {
@@ -151,24 +152,12 @@ function Controller() {
         id: "viewHechoenmijas"
     });
     $.__views.viewHechoenmijas && $.addTopLevelView($.__views.viewHechoenmijas);
-    $.__views.containerHechoenmijas = Ti.UI.createView({
-        width: Ti.UI.FILL,
-        backgroundColor: Alloy.CFG.WHITE,
+    $.__views.scrollableAgendaSlider = Ti.UI.createTableView({
+        separatorColor: Alloy.CFG.GREY_LIGHT,
         top: 0,
-        layout: "vertical",
-        id: "containerHechoenmijas"
-    });
-    $.__views.viewHechoenmijas.add($.__views.containerHechoenmijas);
-    $.__views.scrollableAgendaSlider = Ti.UI.createScrollView({
-        contentWidth: Ti.UI.FILL,
-        showVerticalScrollIndicator: "true",
-        scrollType: "vertical",
-        backgroundColor: Alloy.CFG.WHITE,
-        layout: "vertical",
-        showPagingControl: "false",
         id: "scrollableAgendaSlider"
     });
-    $.__views.containerHechoenmijas.add($.__views.scrollableAgendaSlider);
+    $.__views.viewHechoenmijas.add($.__views.scrollableAgendaSlider);
     exports.destroy = function() {};
     _.extend($, $.__views);
     var managment_View = require("managment_View");

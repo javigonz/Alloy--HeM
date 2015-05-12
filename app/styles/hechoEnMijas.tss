@@ -12,17 +12,15 @@
     layout: 'vertical'
 }
 
+
+
 ".scrollableAgendaSlider[platform=android]": {	     
-	showVerticalScrollIndicator: 'true',
-	scrollType: 'vertical',
-	width: Ti.UI.FILL, 
-	backgroundColor: Alloy.CFG.WHITE,
-	layout: "vertical",
-	top: 0
+	separatorColor: Alloy.CFG.GREY_LIGHT,
+    top: 0
 }
 
 ".rowList[platform=android]": {
-	height: 120,
+	height: Ti.UI.SIZE,
 	backgroundColor: Alloy.CFG.WHITE,
 	focusable: "true",
 	left: 0,
@@ -49,11 +47,11 @@
 }
 
 ".viewDescription[platform=android]": {
-	top: 5,
+	top: 10,
 	bottom: 10,
 	left: 130,
 	width: 200,
-	height: Ti.UI.FILL,
+	height: Ti.UI.SIZE,
 	layout: 'vertical'
 
 }
@@ -76,7 +74,7 @@
 ".iconView[platform=android]": {
 	height: 20,
 	layout: 'horizontal',
-	top: '-5'
+	top: 0
 }
 
 ".textDate[platform=android]": {
@@ -123,7 +121,6 @@
 
 
 // IPHONE *********************************************************
-
 ".viewHechoenmijas[platform=ios]": { 
 	backgroundColor:Alloy.CFG.WHITE,
 	top: 0
@@ -136,48 +133,47 @@
     layout: 'vertical'
 }
 
-".scrollableAgendaSlider[platform=ios]": {
-	contentWidth: Ti.UI.FILL,      
-	showVerticalScrollIndicator: 'true',
-	scrollType: 'vertical',
-	backgroundColor: Alloy.CFG.WHITE,
-	layout: "vertical"     
+
+
+".scrollableAgendaSlider[platform=ios]": {	     
+	separatorColor: Alloy.CFG.GREY_LIGHT,
+    top: 0
 }
 
-".rowList[platform=ios]": { 
-	contentHeight: 140,
-	height: 140,
+".rowList[platform=ios]": {
+	height: Ti.UI.SIZE,
 	backgroundColor: Alloy.CFG.WHITE,
 	focusable: "true",
 	left: 0,
-	selectedBackgroundColor: Alloy.CFG.RED1
+	selectedBackgroundColor: Alloy.CFG.BLUE1
 }
 
 ".rowLine[platform=ios]": {
 	height: 1,
 	width: Ti.UI.FILL,
 	backgroundColor: Alloy.CFG.GREEN1,
-	top: 139
+	top: 119
 }
 
 ".viewImage[platform=ios]": {
-	height: Ti.UI.FILL,
+	height: Ti.UI.SIZE,
 	width: 120,
-	left: 0
+	left: 0,
+	top: 10,
+	bottom: 10	
 	
 }
 
 ".productImage[platform=ios]": {
-	height: Ti.UI.FILL,
 	left: 0
 }
 
 ".viewDescription[platform=ios]": {
+	height: Ti.UI.SIZE,
 	top: 10,
 	bottom: 10,
 	left: 130,
 	width: 160,
-	height: Ti.UI.FILL,
 	layout: 'vertical'
 
 }
@@ -186,12 +182,11 @@
 	color: Alloy.CFG.BLACK,
 	font: {
 		fontFamily: Alloy.CFG.GENEVA, 
-		fontSize: 	14,
+		fontSize: 	13,
 		fontWeight: 'bold'
 	},
 	left: 0
 }
-
 
 ".icon[platform=ios]": {
 	left: 0,
@@ -200,7 +195,8 @@
 
 ".iconView[platform=ios]": {
 	height: 20,
-	layout: 'horizontal'
+	layout: 'horizontal',
+	top: 0
 }
 
 ".textDate[platform=ios]": {
@@ -210,8 +206,7 @@
 		fontSize: 	10,
 		fontWeight: 'bold'
 	},
-	left: 3,
-	top: 2
+	left: 3
 }
 
 ".textDescription[platform=ios]": {
@@ -244,5 +239,3 @@
 		fontWeight: 'normal'
 	}
 }
-
-
