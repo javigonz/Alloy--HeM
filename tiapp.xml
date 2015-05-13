@@ -5,9 +5,9 @@
     <version>1.0</version>
     <publisher>JavierGonzalez</publisher>
     <url>http://www.termicadesign.com</url>
-    <description>undefined</description>
+    <description>consultar los servicios del Ayuntamiento de Mijas</description>
     <copyright>2014 by JavierGonzalez</copyright>
-    <icon>appicon.png</icon>
+    <icon>Icon-60@2x.png</icon>
     <fullscreen>false</fullscreen>
     <navbar-hidden>false</navbar-hidden>
     <analytics>true</analytics>
