@@ -75,6 +75,19 @@ function loadAgenda()
 		    
 		    //Contenedor de la imagen
 		    var view1 = Ti.UI.createView({
+		    					id: datamodel_Agenda.result[i].id
+		    });
+		    view1.applyProperties(viewImage);
+		    
+		    var imageRemote1 = Titanium.UI.createImageView({
+								id: datamodel_Agenda.result[i].id,
+								defaultImage: '/images/download.png' 
+			});
+				
+			imageRemote1.applyProperties(productImage);
+			managment_Data.LoadImage_AsynCache((datamodel_Agenda.result[i].imagen1).split(' ').join('%20'), imageRemote1);
+			
+		    /*var view1 = Ti.UI.createView({
 		    			id: datamodel_Agenda.result[i].id
 		    });
 		    view1.applyProperties(viewImage);
@@ -96,7 +109,7 @@ function loadAgenda()
 		   							id: datamodel_Agenda.result[i].id
 				});	
 				imageRemote1.applyProperties(productImage);
-			}
+			}*/
 			
 			//Contenedor para el texto
 			var view2 = Ti.UI.createView({

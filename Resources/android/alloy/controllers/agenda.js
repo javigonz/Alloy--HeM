@@ -68,13 +68,12 @@ function Controller() {
                     id: datamodel_Agenda.result[i].id
                 });
                 view1.applyProperties(viewImage);
-                var imageRemote1;
                 var imageRemote1 = Titanium.UI.createImageView({
-                    image: Alloy.Globals.UrlImages + datamodel_Agenda.result[i].imagen1,
-                    defaultImage: "/images/download.png",
-                    id: datamodel_Agenda.result[i].id
+                    id: datamodel_Agenda.result[i].id,
+                    defaultImage: "/images/download.png"
                 });
                 imageRemote1.applyProperties(productImage);
+                managment_Data.LoadImage_AsynCache(datamodel_Agenda.result[i].imagen1.split(" ").join("%20"), imageRemote1);
                 var view2 = Ti.UI.createView({
                     id: datamodel_Agenda.result[i].id
                 });

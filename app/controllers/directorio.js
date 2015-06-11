@@ -116,7 +116,16 @@ function loadEmpresasSector()
 		    });
 		    view1.applyProperties(viewImage);
 		    
-		    if (Ti.Platform.osname == "iphone") //En iphone creo una caché con las imágenes remotas, en Android peta
+		    var imageRemote1 = Titanium.UI.createImageView({
+								id: datamodel_EmpresasSector.result[i].id,
+								defaultImage: '/images/download.png' 
+			});
+				
+			imageRemote1.applyProperties(ProductImage);
+			managment_Data.LoadImage_AsynCache((datamodel_EmpresasSector.result[i].imagen1).split(' ').join('%20'), imageRemote1);
+			//managment_Data.LoadImage_AsynCache('papeleria.png', imageRemote1);
+		    
+		   /* if (Ti.Platform.osname == "iphone") //En iphone creo una caché con las imágenes remotas, en Android peta
 			{
 			    var imageRemote1 = remoteView.createRemoteImageView({
 	   								image: Alloy.Globals.UrlImages + datamodel_EmpresasSector.result[i].imagen1,
@@ -127,13 +136,13 @@ function loadEmpresasSector()
 			}
 			else
 			{
-			    var imageRemote1 = Titanium.UI.createImageView({
+			    var imageRemote1 = managment_Data.LoadImage_AsynCache({
 									image: Alloy.Globals.UrlImages + datamodel_EmpresasSector.result[i].imagen1,
 		   							defaultImage: '/images/download.png',
 		   							id: datamodel_EmpresasSector.result[i].id
 				});	
 				imageRemote1.applyProperties(ProductImage);
-			}
+			}*/
 			
 			//Contenedor para el texto
 			var view2 = Ti.UI.createView({

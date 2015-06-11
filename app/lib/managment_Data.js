@@ -4,7 +4,7 @@ var managment_View = require('managment_View');
 
 
 //SERVIDOR DE PRODUCCCIÓN
-var url_WebService_HechoEnMijas = "http://hechoenmijas.solbyte.com.es/ws.php?c=Noticias&m=getAll";
+var url_WebService_HechoEnMijas = "http://hechoenmijas.solbyte.com.es/ws.php?c=Noticias&m=getAllNews";
 var url_WebService_HechoEnMijas_Detail = "http://hechoenmijas.solbyte.com.es/ws.php?c=Noticias&m=getOne";
 var url_WebService_Agenda = "http://hechoenmijas.solbyte.com.es/ws.php?c=Eventos&m=getAll";
 var url_WebService_Agenda_Detail = "http://hechoenmijas.solbyte.com.es/ws.php?c=Eventos&m=getOne";
@@ -15,6 +15,52 @@ var url_WebService_Ofertas = "http://hechoenmijas.solbyte.com.es/ws.php?c=Oferta
 var url_WebService_Ofertas_Detail = "http://hechoenmijas.solbyte.com.es/ws.php?c=Ofertas&m=getOne";
 
 
+
+
+
+
+//************************************************************************************************************************
+//Load image asíncronamente y gestiona la caché
+//************************************************************************************************************************
+exports.LoadImage_AsynCache = function(url, imageRemote){
+	
+
+	var cacheFilename = url.replace(/[^a-zA-Z0-9\.]/ig, '_');
+	var cacheFile = Ti.Filesystem.getFile(Ti.Filesystem.applicationDataDirectory, cacheFilename);	
+	
+	if (cacheFile.exists() ) {
+		
+		Ti.API.info("IMAGEN REMOTA CACHEADA: " );
+		imageRemote.image = cacheFile.nativePath;
+			
+	}
+	else {
+		Ti.API.info("IMAGEN REMOTA NO CACHEADA:" );
+		var xhr = Ti.Network.createHTTPClient({
+
+					     onload : function(e) {
+								imageRemote.image = xhr.responseData;
+								cacheFile.write(xhr.responseData);  
+					     },
+					     
+					     onerror : function(e) {
+					        	// Ti.API.info('ERROR EN LA CARGA');
+					     },
+					     
+					     timeout : 5000  // in milliseconds
+		});
+				
+			       
+		xhr.validatesSecureCertificate = false;
+	 	xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+			       
+		xhr.open('GET', Alloy.Globals.UrlImages + url); 
+		xhr.send();
+	
+	}
+
+	
+};
 
 //************************************************************************************************************************
 //Carga WEBSERVICE de hecho en mijas

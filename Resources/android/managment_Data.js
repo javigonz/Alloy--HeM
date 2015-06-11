@@ -1,6 +1,6 @@
 var managment_View = require("managment_View");
 
-var url_WebService_HechoEnMijas = "http://hechoenmijas.solbyte.com.es/ws.php?c=Noticias&m=getAll";
+var url_WebService_HechoEnMijas = "http://hechoenmijas.solbyte.com.es/ws.php?c=Noticias&m=getAllNews";
 
 var url_WebService_HechoEnMijas_Detail = "http://hechoenmijas.solbyte.com.es/ws.php?c=Noticias&m=getOne";
 
@@ -17,6 +17,29 @@ var url_WebService_Empresa_Detail = "http://hechoenmijas.solbyte.com.es/ws.php?c
 var url_WebService_Ofertas = "http://hechoenmijas.solbyte.com.es/ws.php?c=Ofertas&m=getAll";
 
 var url_WebService_Ofertas_Detail = "http://hechoenmijas.solbyte.com.es/ws.php?c=Ofertas&m=getOne";
+
+exports.LoadImage_AsynCache = function(url, imageRemote) {
+    var cacheFilename = url.replace(/[^a-zA-Z0-9\.]/gi, "_");
+    var cacheFile = Ti.Filesystem.getFile(Ti.Filesystem.applicationDataDirectory, cacheFilename);
+    if (cacheFile.exists()) {
+        Ti.API.info("IMAGEN REMOTA CACHEADA: ");
+        imageRemote.image = cacheFile.nativePath;
+    } else {
+        Ti.API.info("IMAGEN REMOTA NO CACHEADA:");
+        var xhr = Ti.Network.createHTTPClient({
+            onload: function() {
+                imageRemote.image = xhr.responseData;
+                cacheFile.write(xhr.responseData);
+            },
+            onerror: function() {},
+            timeout: 5e3
+        });
+        xhr.validatesSecureCertificate = false;
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.open("GET", Alloy.Globals.UrlImages + url);
+        xhr.send();
+    }
+};
 
 exports.LoadWebService_HechoEnMijas = function() {
     var client = Ti.Network.createHTTPClient({
